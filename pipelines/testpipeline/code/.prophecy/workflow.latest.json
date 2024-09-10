@@ -1,0 +1,303 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.0.31",
+        "pyPiVersion" : "1.9.9"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/testpipeline",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "testpipeline",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true
+    },
+    "language" : "python",
+    "fabricId" : "13854",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "varadharajangmailcomteam.muthu.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "testpipeline",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "0pw7aC7ZW6IfQZRDMWgxx$$YSmmeG51KLgSQHw005z4I",
+    "source" : "ODRwFC6Be_AYj9kN2xFYX$$w9f5XC7RQtVNXp0uyQXzG",
+    "sourcePort" : "Ny57nrXhG18CEusZp_BD9$$1NGa5gRAagcSAESKZyyh_",
+    "target" : "24Xa6MhU00VoNfTEeX2--$$L5FEobE_Vztwlhv5eeRpj",
+    "targetPort" : "LyMxUKbZkqCSZ9ZyaePXe$$y9gDlC-V2-6q-nlTdL5xM"
+  }, {
+    "id" : "HQvG3hHnNXRpM4DbYw_kE",
+    "source" : "q1PYMUF3pzopmMkMX5bGH$$3yuXjYG_msjoedrlKcGmo",
+    "sourcePort" : "xGiSZFj7jnlmxgvxMs5ex$$fvMGTYKhHbpWqoPiAq_um",
+    "target" : "ODRwFC6Be_AYj9kN2xFYX$$w9f5XC7RQtVNXp0uyQXzG",
+    "targetPort" : "rKp9Ol7PUqP5rr2ASjCle$$4OYBFpVZzroQHkh8bWj5X"
+  } ],
+  "processes" : {
+    "q1PYMUF3pzopmMkMX5bGH$$3yuXjYG_msjoedrlKcGmo" : {
+      "id" : "q1PYMUF3pzopmMkMX5bGH$$3yuXjYG_msjoedrlKcGmo",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source_0",
+        "slug" : "Source_0",
+        "x" : -540,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xGiSZFj7jnlmxgvxMs5ex$$fvMGTYKhHbpWqoPiAq_um",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { }
+    },
+    "ODRwFC6Be_AYj9kN2xFYX$$w9f5XC7RQtVNXp0uyQXzG" : {
+      "id" : "ODRwFC6Be_AYj9kN2xFYX$$w9f5XC7RQtVNXp0uyQXzG",
+      "component" : "TransposeAgg",
+      "metadata" : {
+        "label" : "TransposeAgg_1",
+        "slug" : "TransposeAgg_1",
+        "x" : -400,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "rKp9Ol7PUqP5rr2ASjCle$$4OYBFpVZzroQHkh8bWj5X",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Ny57nrXhG18CEusZp_BD9$$1NGa5gRAagcSAESKZyyh_",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ ]
+      }
+    },
+    "24Xa6MhU00VoNfTEeX2--$$L5FEobE_Vztwlhv5eeRpj" : {
+      "id" : "24Xa6MhU00VoNfTEeX2--$$L5FEobE_Vztwlhv5eeRpj",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : -40,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LyMxUKbZkqCSZ9ZyaePXe$$y9gDlC-V2-6q-nlTdL5xM",
+          "slug" : "in0"
+        }, {
+          "id" : "VLRokp_0x8i_yiBZMDwB8$$M3UV63uyURMjy4SohYFPg",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "AwJPYUbhdzEiYsHUiUsdI$$9OUDGs_9sMZnadod38UsD",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : ""
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "LyMxUKbZkqCSZ9ZyaePXe$$y9gDlC-V2-6q-nlTdL5xM",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "VLRokp_0x8i_yiBZMDwB8$$M3UV63uyURMjy4SohYFPg",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.28&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.q1PYMUF3pzopmMkMX5bGH$$3yuXjYG_msjoedrlKcGmo.properties.datasetId",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "dataset id missing",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.ODRwFC6Be_AYj9kN2xFYX$$w9f5XC7RQtVNXp0uyQXzG",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.ODRwFC6Be_AYj9kN2xFYX$$w9f5XC7RQtVNXp0uyQXzG.properties.aggregate",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "At least one aggregate expression is required in Aggregate.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.24Xa6MhU00VoNfTEeX2--$$L5FEobE_Vztwlhv5eeRpj.ports.inputs[1]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in1",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.24Xa6MhU00VoNfTEeX2--$$L5FEobE_Vztwlhv5eeRpj.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Expression cannot be empty. [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}
